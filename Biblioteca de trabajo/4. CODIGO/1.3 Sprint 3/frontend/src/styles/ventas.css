@@ -1,0 +1,1360 @@
+/* Variables CSS para consistencia con el sistema */
+:root {
+  --primary-color: #007bff;
+  --primary-hover: #0056b3;
+  --success-color: #28a745;
+  --success-hover: #218838;
+  --danger-color: #dc3545;
+  --danger-hover: #c82333;
+  --warning-color: #ffc107;
+  --warning-hover: #e0a800;
+  --info-color: #17a2b8;
+  --info-hover: #138496;
+  --secondary-color: #6c757d;
+  --secondary-hover: #5a6268;
+  --light-gray: #f8f9fa;
+  --border-color: #dee2e6;
+  --text-color: #495057;
+  --text-muted: #6c757d;
+  --white: #ffffff;
+  --border-radius: 12px;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.15);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Contenedor principal - solo afecta a esta página */
+.ventas-container {
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Cards específicos para ventas */
+.ventas-container .p-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border: none;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.ventas-container .p-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.ventas-container .p-card .p-card-header {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  padding: 1.25rem;
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 12px 12px 0 0;
+}
+
+.ventas-container .p-card .p-card-body {
+  padding: 1.5rem;
+}
+
+.ventas-container .p-card .p-card-content {
+  padding: 0;
+}
+
+.ventas-container .p-card .p-card-title {
+  color: #495057;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Tabs específicos para ventas */
+.ventas-container .p-tabview {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ventas-container .p-tabview .p-tabview-nav {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  border-radius: 12px 12px 0 0;
+  border: none;
+  padding: 0 1rem;
+}
+
+.ventas-container .p-tabview .p-tabview-nav li {
+  margin: 0 0.5rem;
+}
+
+.ventas-container .p-tabview .p-tabview-nav li .p-tabview-nav-link {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  padding: 1rem 1.5rem;
+  border-radius: 8px 8px 0 0;
+  transition: all 0.3s ease;
+}
+
+.ventas-container .p-tabview .p-tabview-nav li .p-tabview-nav-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.ventas-container .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+  background: white;
+  color: #007bff;
+  font-weight: 600;
+}
+
+.ventas-container .p-tabview .p-tabview-panels {
+  background: white;
+  border: none;
+  padding: 1.5rem;
+  border-radius: 0 0 12px 12px;
+}
+
+/* Formulario específico para ventas */
+.ventas-container .formgrid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+
+.ventas-container .formgrid > .field {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.ventas-container .field {
+  margin-bottom: 1.25rem;
+}
+
+.ventas-container .field label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #495057;
+  font-size: 0.9rem;
+}
+
+.ventas-container .field .p-inputtext,
+.ventas-container .field .p-inputnumber,
+.ventas-container .field .p-dropdown,
+.ventas-container .field .p-autocomplete,
+.ventas-container .field .p-calendar,
+.ventas-container .field .p-inputtextarea {
+  width: 100%;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 0.75rem;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.ventas-container .field .p-inputtext:focus,
+.ventas-container .field .p-inputnumber:focus,
+.ventas-container .field .p-dropdown:focus,
+.ventas-container .field .p-autocomplete:focus,
+.ventas-container .field .p-calendar:focus,
+.ventas-container .field .p-inputtextarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+  outline: none;
+}
+
+.ventas-container .field .p-inputtext:disabled,
+.ventas-container .field .p-inputnumber:disabled,
+.ventas-container .field .p-dropdown:disabled,
+.ventas-container .field .p-autocomplete:disabled,
+.ventas-container .field .p-calendar:disabled,
+.ventas-container .field .p-inputtextarea:disabled {
+  background: #f8f9fa;
+  color: #6c757d;
+  opacity: 0.7;
+}
+
+/* Botones específicos para ventas */
+.ventas-container .p-button {
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 0.85rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.ventas-container .p-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.ventas-container .p-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.ventas-container .p-button.p-button-primary {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+}
+
+.ventas-container .p-button.p-button-primary:hover {
+  background: linear-gradient(135deg, #0056b3, #004085);
+}
+
+.ventas-container .p-button.p-button-success {
+  background: linear-gradient(135deg, #28a745, #218838);
+  color: white;
+}
+
+.ventas-container .p-button.p-button-success:hover {
+  background: linear-gradient(135deg, #218838, #1e7e34);
+}
+
+.ventas-container .p-button.p-button-secondary {
+  background: linear-gradient(135deg, #6c757d, #5a6268);
+  color: white;
+}
+
+.ventas-container .p-button.p-button-secondary:hover {
+  background: linear-gradient(135deg, #5a6268, #495057);
+}
+
+.ventas-container .p-button.p-button-danger {
+  background: linear-gradient(135deg, #dc3545, #c82333);
+  color: white;
+}
+
+.ventas-container .p-button.p-button-danger:hover {
+  background: linear-gradient(135deg, #c82333, #a71e2a);
+}
+
+.ventas-container .p-button.p-button-info {
+  background: linear-gradient(135deg, #17a2b8, #138496);
+  color: white;
+}
+
+.ventas-container .p-button.p-button-info:hover {
+  background: linear-gradient(135deg, #138496, #0f6674);
+}
+
+.ventas-container .p-button.p-button-warning {
+  background: linear-gradient(135deg, #ffc107, #e0a800);
+  color: #212529;
+}
+
+.ventas-container .p-button.p-button-warning:hover {
+  background: linear-gradient(135deg, #e0a800, #c69500);
+}
+
+.ventas-container .p-button.p-button-outlined {
+  background: transparent;
+  color: #007bff;
+  border: 2px solid #007bff;
+}
+
+.ventas-container .p-button.p-button-outlined:hover {
+  background: #007bff;
+  color: white;
+}
+
+.ventas-container .p-button.p-button-text {
+  background: transparent;
+  color: #007bff;
+  border: none;
+  padding: 0.5rem 1rem;
+}
+
+.ventas-container .p-button.p-button-text:hover {
+  background: rgba(0, 123, 255, 0.1);
+  color: #0056b3;
+}
+
+/* DataTable específico para ventas */
+.ventas-container .p-datatable {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ventas-container .p-datatable .p-datatable-header {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  padding: 1rem;
+  font-weight: 600;
+  border: none;
+}
+
+.ventas-container .p-datatable .p-datatable-thead > tr > th {
+  background: #007bff;
+  color: white;
+  border-color: #0056b3;
+  padding: 1rem 0.75rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.ventas-container .p-datatable .p-datatable-tbody > tr {
+  transition: all 0.2s ease;
+}
+
+.ventas-container .p-datatable .p-datatable-tbody > tr:hover {
+  background: #f8f9fa;
+}
+
+.ventas-container .p-datatable .p-datatable-tbody > tr > td {
+  padding: 0.75rem;
+  border-color: #e9ecef;
+  font-size: 0.85rem;
+  word-break: break-word;
+}
+
+.ventas-container .p-datatable .p-datatable-emptymessage {
+  text-align: center;
+  padding: 2rem;
+  color: #6c757d;
+  font-style: italic;
+}
+
+.ventas-container .p-datatable .p-datatable-loading-overlay {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+}
+
+/* Paginador específico */
+.ventas-container .p-paginator {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 0 0 12px 12px;
+  padding: 0.75rem;
+}
+
+.ventas-container .p-paginator .p-paginator-pages .p-paginator-page {
+  border-radius: 6px;
+  min-width: 2rem;
+  height: 2rem;
+  font-size: 0.8rem;
+  margin: 0 0.25rem;
+}
+
+.ventas-container .p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  border-color: #007bff;
+}
+
+/* Tags específicos para ventas */
+.ventas-container .p-tag {
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ventas-container .p-tag.p-tag-success {
+  background: linear-gradient(135deg, #28a745, #218838);
+  color: white;
+}
+
+.ventas-container .p-tag.p-tag-danger {
+  background: linear-gradient(135deg, #dc3545, #c82333);
+  color: white;
+}
+
+.ventas-container .p-tag.p-tag-warning {
+  background: linear-gradient(135deg, #ffc107, #e0a800);
+  color: #212529;
+}
+
+.ventas-container .p-tag.p-tag-info {
+  background: linear-gradient(135deg, #17a2b8, #138496);
+  color: white;
+}
+
+.ventas-container .p-tag.p-tag-primary {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+}
+
+.ventas-container .p-tag.p-tag-rounded {
+  border-radius: 50px;
+}
+
+/* Toolbar específico */
+.ventas-container .p-toolbar {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.ventas-container .p-toolbar .p-toolbar-group-left,
+.ventas-container .p-toolbar .p-toolbar-group-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Badge específico */
+.ventas-container .p-badge {
+  background: linear-gradient(135deg, #dc3545, #c82333);
+  color: white;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  font-weight: 600;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ventas-container .p-badge.p-badge-primary {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+}
+
+.ventas-container .p-badge.p-badge-success {
+  background: linear-gradient(135deg, #28a745, #218838);
+}
+
+.ventas-container .p-badge.p-badge-warning {
+  background: linear-gradient(135deg, #ffc107, #e0a800);
+  color: #212529;
+}
+
+.ventas-container .p-badge.p-badge-info {
+  background: linear-gradient(135deg, #17a2b8, #138496);
+}
+
+/* AutoComplete específico */
+.ventas-container .p-autocomplete .p-autocomplete-input {
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.ventas-container .p-autocomplete .p-autocomplete-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.ventas-container .p-autocomplete-panel {
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin-top: 0.25rem;
+}
+
+.ventas-container .p-autocomplete-panel .p-autocomplete-items {
+  padding: 0.5rem 0;
+}
+
+.ventas-container .p-autocomplete-panel .p-autocomplete-item {
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid #f8f9fa;
+}
+
+.ventas-container .p-autocomplete-panel .p-autocomplete-item:hover {
+  background: #f8f9fa;
+}
+
+.ventas-container .p-autocomplete-panel .p-autocomplete-item:last-child {
+  border-bottom: none;
+}
+
+/* Dropdown específico */
+.ventas-container .p-dropdown {
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.ventas-container .p-dropdown:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.ventas-container .p-dropdown .p-dropdown-label {
+  padding: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.ventas-container .p-dropdown-panel {
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin-top: 0.25rem;
+}
+
+.ventas-container .p-dropdown-panel .p-dropdown-items {
+  padding: 0.5rem 0;
+}
+
+.ventas-container .p-dropdown-panel .p-dropdown-item {
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ventas-container .p-dropdown-panel .p-dropdown-item:hover {
+  background: #f8f9fa;
+}
+
+.ventas-container .p-dropdown-panel .p-dropdown-item.p-highlight {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+}
+
+/* Calendar específico */
+.ventas-container .p-calendar {
+  width: 100%;
+}
+
+.ventas-container .p-calendar .p-inputtext {
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.ventas-container .p-calendar .p-inputtext:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.ventas-container .p-datepicker {
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.ventas-container .p-datepicker .p-datepicker-header {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  padding: 1rem;
+  border-radius: 8px 8px 0 0;
+}
+
+.ventas-container .p-datepicker .p-datepicker-calendar td > span {
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.ventas-container .p-datepicker .p-datepicker-calendar td > span:hover {
+  background: rgba(0, 123, 255, 0.1);
+  color: #007bff;
+}
+
+.ventas-container .p-datepicker .p-datepicker-calendar td > span.p-highlight {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+}
+
+/* Input Number específico para ventas */
+.ventas-container .p-inputnumber {
+  width: 100%;
+}
+
+.ventas-container .p-inputnumber .p-inputnumber-input {
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.ventas-container .p-inputnumber .p-inputnumber-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.ventas-container .p-inputnumber .p-inputnumber-button-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.ventas-container .p-inputnumber .p-inputnumber-button {
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  width: 2rem;
+  height: 1.5rem;
+  margin: 0.125rem 0;
+  transition: all 0.3s ease;
+}
+
+.ventas-container .p-inputnumber .p-inputnumber-button:hover {
+  background: #0056b3;
+}
+
+/* Divider específico */
+.ventas-container .p-divider {
+  margin: 1.5rem 0;
+  border-color: #e9ecef;
+}
+
+.ventas-container .p-divider.p-divider-horizontal:before {
+  border-top: 1px solid #e9ecef;
+}
+
+/* Dialog específico para ventas */
+.ventas-container .p-dialog {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.ventas-container .p-dialog .p-dialog-header {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  padding: 1.25rem;
+  font-weight: 600;
+  border-radius: 12px 12px 0 0;
+}
+
+.ventas-container .p-dialog .p-dialog-header .p-dialog-title {
+  color: white;
+  font-weight: 600;
+}
+
+.ventas-container .p-dialog .p-dialog-content {
+  padding: 1.5rem;
+}
+
+.ventas-container .p-dialog .p-dialog-footer {
+  padding: 1.25rem;
+  background: #f8f9fa;
+  border-radius: 0 0 12px 12px;
+  border-top: 1px solid #e9ecef;
+}
+
+/* Confirm Dialog específico */
+.ventas-container .p-confirm-dialog {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.ventas-container .p-confirm-dialog .p-dialog-header {
+  background: linear-gradient(135deg, #ffc107, #e0a800);
+  color: #212529;
+  padding: 1.25rem;
+  font-weight: 600;
+  border-radius: 12px 12px 0 0;
+}
+
+.ventas-container .p-confirm-dialog .p-dialog-content {
+  padding: 1.5rem;
+}
+
+.ventas-container .p-confirm-dialog .p-dialog-footer {
+  padding: 1.25rem;
+  background: #f8f9fa;
+  border-radius: 0 0 12px 12px;
+  border-top: 1px solid #e9ecef;
+}
+
+/* Toast específico para ventas */
+.ventas-container .p-toast .p-toast-message {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin: 0.5rem;
+}
+
+.ventas-container .p-toast .p-toast-message.p-toast-message-success {
+  background: linear-gradient(135deg, #28a745, #218838);
+  border-color: #28a745;
+}
+
+.ventas-container .p-toast .p-toast-message.p-toast-message-error {
+  background: linear-gradient(135deg, #dc3545, #c82333);
+  border-color: #dc3545;
+}
+
+.ventas-container .p-toast .p-toast-message.p-toast-message-warn {
+  background: linear-gradient(135deg, #ffc107, #e0a800);
+  border-color: #ffc107;
+}
+
+.ventas-container .p-toast .p-toast-message.p-toast-message-info {
+  background: linear-gradient(135deg, #17a2b8, #138496);
+  border-color: #17a2b8;
+}
+
+/* Estilos específicos para el carrito de compras */
+.ventas-container .carrito-vacio {
+  text-align: center;
+  padding: 2rem;
+  color: #6c757d;
+}
+
+.ventas-container .carrito-vacio i {
+  font-size: 3rem;
+  color: #e9ecef;
+  margin-bottom: 1rem;
+}
+
+.ventas-container .carrito-vacio p {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Estilos para el resumen de venta */
+.ventas-container .resumen-venta {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.ventas-container .resumen-venta .resumen-line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  padding: 0.25rem 0;
+}
+
+.ventas-container .resumen-venta .resumen-line.total {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #007bff;
+  border-top: 2px solid #e9ecef;
+  padding-top: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.ventas-container .resumen-venta .resumen-line.descuento {
+  color: #dc3545;
+}
+
+/* Estilos para estadísticas */
+.ventas-container .estadisticas-card {
+  background: linear-gradient(135deg, #ffffff, #f8f9fa);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+}
+
+.ventas-container .estadisticas-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.ventas-container .estadisticas-card .estadistica-valor {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.ventas-container .estadisticas-card .estadistica-label {
+  color: #6c757d;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.ventas-container .estadisticas-card .estadistica-valor.primary {
+  color: #007bff;
+}
+
+.ventas-container .estadisticas-card .estadistica-valor.success {
+  color: #28a745;
+}
+
+.ventas-container .estadisticas-card .estadistica-valor.info {
+  color: #17a2b8;
+}
+
+.ventas-container .estadisticas-card .estadistica-valor.warning {
+  color: #ffc107;
+}
+
+.ventas-container .estadisticas-card .estadistica-valor.danger {
+  color: #dc3545;
+}
+
+/* Clases de utilidad específicas para ventas */
+.ventas-container .flex {
+  display: flex;
+}
+
+.ventas-container .align-items-center {
+  align-items: center;
+}
+
+.ventas-container .justify-content-center {
+  justify-content: center;
+}
+
+.ventas-container .justify-content-between {
+  justify-content: space-between;
+}
+
+.ventas-container .justify-content-end {
+  justify-content: flex-end;
+}
+
+.ventas-container .flex-wrap {
+  flex-wrap: wrap;
+}
+
+.ventas-container .flex-1 {
+  flex: 1;
+}
+
+.ventas-container .gap-1 {
+  gap: 0.25rem;
+}
+
+.ventas-container .gap-2 {
+  gap: 0.5rem;
+}
+
+.ventas-container .gap-3 {
+  gap: 1rem;
+}
+
+.ventas-container .w-full {
+  width: 100%;
+}
+
+.ventas-container .mb-0 {
+  margin-bottom: 0;
+}
+
+.ventas-container .mb-1 {
+  margin-bottom: 0.25rem;
+}
+
+.ventas-container .mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.ventas-container .mb-3 {
+  margin-bottom: 1rem;
+}
+
+.ventas-container .mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+.ventas-container .mt-3 {
+  margin-top: 1rem;
+}
+
+.ventas-container .mt-4 {
+  margin-top: 1.5rem;
+}
+
+.ventas-container .p-3 {
+  padding: 1rem;
+}
+
+.ventas-container .p-4 {
+  padding: 1.5rem;
+}
+
+.ventas-container .py-4 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.ventas-container .text-xs {
+  font-size: 0.75rem;
+}
+
+.ventas-container .text-sm {
+  font-size: 0.875rem;
+}
+
+.ventas-container .text-lg {
+  font-size: 1.125rem;
+}
+
+.ventas-container .text-xl {
+  font-size: 1.25rem;
+}
+
+.ventas-container .text-2xl {
+  font-size: 1.5rem;
+}
+
+.ventas-container .text-3xl {
+  font-size: 1.875rem;
+}
+
+.ventas-container .font-medium {
+  font-weight: 500;
+}
+
+.ventas-container .font-semibold {
+  font-weight: 600;
+}
+
+.ventas-container .font-bold {
+  font-weight: 700;
+}
+
+.ventas-container .text-center {
+  text-align: center;
+}
+
+.ventas-container .text-right {
+  text-align: right;
+}
+
+.ventas-container .text-left {
+  text-align: left;
+}
+
+.ventas-container .text-500 {
+  color: #6c757d;
+}
+
+.ventas-container .text-600 {
+  color: #495057;
+}
+
+.ventas-container .text-700 {
+  color: #343a40;
+}
+
+.ventas-container .text-primary {
+  color: #007bff;
+}
+
+.ventas-container .text-blue-500 {
+  color: #007bff;
+}
+
+.ventas-container .text-blue-600 {
+  color: #0056b3;
+}
+
+.ventas-container .text-green-500 {
+  color: #28a745;
+}
+
+.ventas-container .text-green-600 {
+  color: #218838;
+}
+
+.ventas-container .text-red-500 {
+  color: #dc3545;
+}
+
+.ventas-container .text-red-600 {
+  color: #c82333;
+}
+
+.ventas-container .text-orange-500 {
+  color: #fd7e14;
+}
+
+.ventas-container .text-orange-600 {
+  color: #e8590c;
+}
+
+.ventas-container .text-purple-500 {
+  color: #6f42c1;
+}
+
+.ventas-container .text-purple-600 {
+  color: #5a32a3;
+}
+
+.ventas-container .border-round {
+  border-radius: 12px;
+}
+
+.ventas-container .surface-0 {
+  background: #ffffff;
+}
+
+.ventas-container .surface-50 {
+  background: #f8f9fa;
+}
+
+.ventas-container .surface-100 {
+  background: #e9ecef;
+}
+
+.ventas-container .block {
+  display: block;
+}
+
+.ventas-container .inline-block {
+  display: inline-block;
+}
+
+.ventas-container .hidden {
+  display: none;
+}
+
+/* Grid system específico para ventas */
+.ventas-container .grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+
+.ventas-container .col-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 0 0.5rem;
+}
+
+.ventas-container .col-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 0 0.5rem;
+}
+
+.ventas-container .col-4 {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  padding: 0 0.5rem;
+}
+
+.ventas-container .col-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+  padding: 0 0.5rem;
+}
+
+.ventas-container .col-8 {
+  flex: 0 0 66.666667%;
+  max-width: 66.666667%;
+  padding: 0 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .ventas-container .md\:col-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  
+  .ventas-container .md\:col-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+  
+  .ventas-container .md\:col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  
+  .ventas-container .md\:col-8 {
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .ventas-container .lg\:col-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+  
+  .ventas-container .lg\:col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  
+  .ventas-container .lg\:col-8 {
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+  }
+}
+
+/* Responsive específico para ventas */
+@media screen and (max-width: 768px) {
+  .ventas-container {
+    padding: 1rem;
+    padding-top: 4rem;
+  }
+  
+  .ventas-container .p-card .p-card-body {
+    padding: 1rem;
+  }
+  
+  .ventas-container .p-tabview .p-tabview-panels {
+    padding: 1rem;
+  }
+  
+  .ventas-container .p-button {
+    padding: 0.65rem 1rem;
+    font-size: 0.8rem;
+  }
+  
+  .ventas-container .estadisticas-card {
+    padding: 1rem;
+  }
+  
+  .ventas-container .estadisticas-card .estadistica-valor {
+    font-size: 1.5rem;
+  }
+  
+  .ventas-container .p-datatable .p-datatable-thead > tr > th,
+  .ventas-container .p-datatable .p-datatable-tbody > tr > td {
+    padding: 0.5rem 0.25rem;
+    font-size: 0.75rem;
+  }
+  
+  .ventas-container .p-dialog {
+    width: 95vw;
+    margin: 0.5rem;
+  }
+  
+  .ventas-container .resumen-venta {
+    padding: 0.75rem;
+  }
+  
+  .ventas-container .resumen-venta .resumen-line {
+    font-size: 0.85rem;
+  }
+  
+  .ventas-container .resumen-venta .resumen-line.total {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .ventas-container {
+    padding: 0.75rem;
+    padding-top: 4rem;
+  }
+  
+  .ventas-container .p-card .p-card-header {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  
+  .ventas-container .p-card .p-card-body {
+    padding: 0.75rem;
+  }
+  
+  .ventas-container .p-tabview .p-tabview-nav li .p-tabview-nav-link {
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+  }
+  
+  .ventas-container .p-button {
+    padding: 0.6rem 0.75rem;
+    font-size: 0.75rem;
+  }
+  
+  .ventas-container .estadisticas-card {
+    padding: 0.75rem;
+  }
+  
+  .ventas-container .estadisticas-card .estadistica-valor {
+    font-size: 1.25rem;
+  }
+  
+  .ventas-container .p-datatable .p-datatable-thead > tr > th,
+  .ventas-container .p-datatable .p-datatable-tbody > tr > td {
+    padding: 0.4rem 0.2rem;
+    font-size: 0.7rem;
+  }
+  
+  .ventas-container .field .p-inputtext,
+  .ventas-container .field .p-inputnumber,
+  .ventas-container .field .p-dropdown,
+  .ventas-container .field .p-autocomplete,
+  .ventas-container .field .p-calendar,
+  .ventas-container .field .p-inputtextarea {
+    padding: 0.65rem;
+    font-size: 0.85rem;
+  }
+  
+  .ventas-container .field label {
+    font-size: 0.85rem;
+  }
+  
+  .ventas-container .resumen-venta {
+    padding: 0.5rem;
+  }
+  
+  .ventas-container .resumen-venta .resumen-line {
+    font-size: 0.8rem;
+  }
+  
+  .ventas-container .resumen-venta .resumen-line.total {
+    font-size: 0.9rem;
+  }
+}
+
+/* Animaciones específicas para ventas */
+@keyframes ventasFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ventasSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes ventasPulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes ventasShake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+/* Aplicar animaciones específicas */
+.ventas-container .p-card {
+  animation: ventasFadeIn 0.6s ease-out;
+}
+
+.ventas-container .p-datatable {
+  animation: ventasSlideIn 0.4s ease-out;
+}
+
+.ventas-container .estadisticas-card {
+  animation: ventasFadeIn 0.6s ease-out;
+}
+
+.ventas-container .p-tag {
+  animation: ventasPulse 2s ease-in-out infinite;
+}
+
+.ventas-container .carrito-item-agregado {
+  animation: ventasPulse 0.5s ease-in-out;
+}
+
+.ventas-container .error-shake {
+  animation: ventasShake 0.5s ease-in-out;
+}
+
+/* Focus mejorado específico para ventas */
+.ventas-container *:focus-visible {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+.ventas-container .p-button:focus-visible {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+.ventas-container .p-inputtext:focus-visible,
+.ventas-container .p-inputnumber:focus-visible,
+.ventas-container .p-dropdown:focus-visible,
+.ventas-container .p-autocomplete:focus-visible,
+.ventas-container .p-calendar:focus-visible,
+.ventas-container .p-inputtextarea:focus-visible {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+/* Estados de loading específicos para ventas */
+.ventas-container .p-button.p-button-loading {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.ventas-container .p-button.p-button-loading .p-button-icon {
+  animation: ventasSpin 1s linear infinite;
+}
+
+@keyframes ventasSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Mejoras de accesibilidad específicas para ventas */
+@media (prefers-reduced-motion: reduce) {
+  .ventas-container *,
+  .ventas-container *::before,
+  .ventas-container *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Estilos específicos para impresión */
+@media print {
+  .ventas-container .p-button,
+  .ventas-container .p-tabview-nav,
+  .ventas-container .p-dialog,
+  .ventas-container .p-toast {
+    display: none !important;
+  }
+  
+  .ventas-container .p-card {
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+  
+  .ventas-container .p-datatable {
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+  
+  .ventas-container {
+    padding: 0;
+    background: white;
+  }
+}
+

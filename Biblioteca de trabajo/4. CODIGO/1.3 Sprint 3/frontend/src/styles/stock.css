@@ -1,0 +1,804 @@
+/* Estilos específicos SOLO para el módulo de Verificar Stock */
+
+/* Contenedor principal - solo afecta a esta página */
+.verificar-stock-container {
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Cards específicos para stock */
+.verificar-stock-container .p-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border: none;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.verificar-stock-container .p-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.verificar-stock-container .p-card .p-card-header {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 1.25rem;
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 12px 12px 0 0;
+}
+
+.verificar-stock-container .p-card .p-card-body {
+  padding: 1.5rem;
+}
+
+.verificar-stock-container .p-card .p-card-content {
+  padding: 0;
+}
+
+/* Tabs específicos para stock */
+.verificar-stock-container .p-tabview .p-tabview-nav {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 12px 12px 0 0;
+  border: none;
+  padding: 0 1rem;
+}
+
+.verificar-stock-container .p-tabview .p-tabview-nav li {
+  margin: 0 0.5rem;
+}
+
+.verificar-stock-container .p-tabview .p-tabview-nav li .p-tabview-nav-link {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  padding: 1rem 1.5rem;
+  border-radius: 8px 8px 0 0;
+  transition: all 0.3s ease;
+}
+
+.verificar-stock-container .p-tabview .p-tabview-nav li .p-tabview-nav-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.verificar-stock-container .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+  background: white;
+  color: #667eea;
+  font-weight: 600;
+}
+
+.verificar-stock-container .p-tabview .p-tabview-panels {
+  background: white;
+  border: none;
+  padding: 1.5rem;
+  border-radius: 0 0 12px 12px;
+}
+
+/* Formulario específico para stock */
+.verificar-stock-container .formgrid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+
+.verificar-stock-container .formgrid > .field {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.verificar-stock-container .field {
+  margin-bottom: 1.25rem;
+}
+
+.verificar-stock-container .field label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #495057;
+  font-size: 0.9rem;
+}
+
+.verificar-stock-container .field .p-inputtext,
+.verificar-stock-container .field .p-inputnumber {
+  width: 100%;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 0.75rem;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.verificar-stock-container .field .p-inputtext:focus,
+.verificar-stock-container .field .p-inputnumber:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  outline: none;
+}
+
+.verificar-stock-container .field .p-inputtext:disabled,
+.verificar-stock-container .field .p-inputnumber:disabled {
+  background: #f8f9fa;
+  color: #6c757d;
+  opacity: 0.7;
+}
+
+/* Botones específicos para stock */
+.verificar-stock-container .p-button {
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 0.85rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.verificar-stock-container .p-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.verificar-stock-container .p-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.verificar-stock-container .p-button.p-button-success {
+  background: linear-gradient(135deg, #28a745, #20c997);
+  color: white;
+}
+
+.verificar-stock-container .p-button.p-button-success:hover {
+  background: linear-gradient(135deg, #218838, #1ba085);
+}
+
+.verificar-stock-container .p-button.p-button-secondary {
+  background: linear-gradient(135deg, #6c757d, #5a6268);
+  color: white;
+}
+
+.verificar-stock-container .p-button.p-button-secondary:hover {
+  background: linear-gradient(135deg, #5a6268, #495057);
+}
+
+.verificar-stock-container .p-button.p-button-outlined {
+  background: transparent;
+  color: #667eea;
+  border: 2px solid #667eea;
+}
+
+.verificar-stock-container .p-button.p-button-outlined:hover {
+  background: #667eea;
+  color: white;
+}
+
+/* Botones de nivel de stock específicos */
+.verificar-stock-container .p-button-danger.p-button-outlined {
+  color: #dc3545;
+  border-color: #dc3545;
+}
+
+.verificar-stock-container .p-button-danger.p-button-outlined:hover {
+  background: #dc3545;
+  color: white;
+}
+
+.verificar-stock-container .p-button-warning.p-button-outlined {
+  color: #ffc107;
+  border-color: #ffc107;
+}
+
+.verificar-stock-container .p-button-warning.p-button-outlined:hover {
+  background: #ffc107;
+  color: #212529;
+}
+
+.verificar-stock-container .p-button-info.p-button-outlined {
+  color: #17a2b8;
+  border-color: #17a2b8;
+}
+
+.verificar-stock-container .p-button-info.p-button-outlined:hover {
+  background: #17a2b8;
+  color: white;
+}
+
+/* Mensajes específicos para stock */
+.verificar-stock-container .p-message {
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.verificar-stock-container .p-message.p-message-success {
+  background: linear-gradient(135deg, #d4edda, #c3e6cb);
+  color: #155724;
+}
+
+.verificar-stock-container .p-message.p-message-error {
+  background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+  color: #721c24;
+}
+
+.verificar-stock-container .p-message.p-message-warn {
+  background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+  color: #856404;
+}
+
+.verificar-stock-container .p-message.p-message-info {
+  background: linear-gradient(135deg, #cce7ff, #a8d4ff);
+  color: #0c5460;
+}
+
+/* Superficie y tarjetas específicas */
+.verificar-stock-container .surface-0 {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.verificar-stock-container .border-round {
+  border-radius: 12px;
+}
+
+.verificar-stock-container .p-4 {
+  padding: 1.5rem;
+}
+
+/* Tags específicos para stock */
+.verificar-stock-container .p-tag {
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.verificar-stock-container .p-tag.p-tag-success {
+  background: linear-gradient(135deg, #28a745, #20c997);
+  color: white;
+}
+
+.verificar-stock-container .p-tag.p-tag-danger {
+  background: linear-gradient(135deg, #dc3545, #c82333);
+  color: white;
+}
+
+.verificar-stock-container .p-tag.p-tag-warning {
+  background: linear-gradient(135deg, #ffc107, #e0a800);
+  color: #212529;
+}
+
+.verificar-stock-container .p-tag.p-tag-info {
+  background: linear-gradient(135deg, #17a2b8, #138496);
+  color: white;
+}
+
+.verificar-stock-container .p-tag.p-tag-rounded {
+  border-radius: 50px;
+}
+
+/* Progress bar específico */
+.verificar-stock-container .p-progressbar {
+  height: 8px;
+  background: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.verificar-stock-container .p-progressbar .p-progressbar-value {
+  border-radius: 4px;
+  transition: width 0.6s ease;
+}
+
+/* Tarjetas de estadísticas específicas */
+.verificar-stock-container .stats-card {
+  background: linear-gradient(135deg, #ffffff, #f8f9fa);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+}
+
+.verificar-stock-container .stats-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.verificar-stock-container .stats-card .text-500 {
+  color: #6c757d;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.verificar-stock-container .stats-card .text-2xl {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.verificar-stock-container .stats-card .text-primary {
+  color: #667eea;
+}
+
+.verificar-stock-container .stats-card .text-green-500 {
+  color: #28a745;
+}
+
+.verificar-stock-container .stats-card .text-red-500 {
+  color: #dc3545;
+}
+
+.verificar-stock-container .stats-card .text-orange-500 {
+  color: #fd7e14;
+}
+
+/* DataTable específico para stock */
+.verificar-stock-container .p-datatable {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.verificar-stock-container .p-datatable .p-datatable-header {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 1rem;
+  font-weight: 600;
+  border: none;
+}
+
+.verificar-stock-container .p-datatable .p-datatable-thead > tr > th {
+  background: #667eea;
+  color: white;
+  border-color: #5a6fd8;
+  padding: 1rem 0.75rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.verificar-stock-container .p-datatable .p-datatable-tbody > tr {
+  transition: all 0.2s ease;
+}
+
+.verificar-stock-container .p-datatable .p-datatable-tbody > tr:hover {
+  background: #f8f9fa;
+}
+
+.verificar-stock-container .p-datatable .p-datatable-tbody > tr > td {
+  padding: 0.75rem;
+  border-color: #e9ecef;
+  font-size: 0.85rem;
+  word-break: break-word;
+}
+
+.verificar-stock-container .p-datatable .p-datatable-emptymessage {
+  text-align: center;
+  padding: 2rem;
+  color: #6c757d;
+  font-style: italic;
+}
+
+.verificar-stock-container .p-datatable .p-datatable-loading-overlay {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+}
+
+/* Paginador específico */
+.verificar-stock-container .p-paginator {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 0 0 12px 12px;
+  padding: 0.75rem;
+}
+
+.verificar-stock-container .p-paginator .p-paginator-pages .p-paginator-page {
+  border-radius: 6px;
+  min-width: 2rem;
+  height: 2rem;
+  font-size: 0.8rem;
+  margin: 0 0.25rem;
+}
+
+.verificar-stock-container .p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border-color: #667eea;
+}
+
+/* Input Number específico para stock */
+.verificar-stock-container .p-inputnumber {
+  width: 100%;
+}
+
+.verificar-stock-container .p-inputnumber .p-inputnumber-input {
+  width: 100%;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.verificar-stock-container .p-inputnumber .p-inputnumber-input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.verificar-stock-container .p-inputnumber .p-inputnumber-button-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.verificar-stock-container .p-inputnumber .p-inputnumber-button {
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  width: 2rem;
+  height: 1.5rem;
+  margin: 0.125rem 0;
+  transition: all 0.3s ease;
+}
+
+.verificar-stock-container .p-inputnumber .p-inputnumber-button:hover {
+  background: #5a6fd8;
+}
+
+/* Divider específico */
+.verificar-stock-container .p-divider {
+  margin: 1.5rem 0;
+  border-color: #e9ecef;
+}
+
+/* Clases de utilidad específicas para stock */
+.verificar-stock-container .flex {
+  display: flex;
+}
+
+.verificar-stock-container .align-items-center {
+  align-items: center;
+}
+
+.verificar-stock-container .justify-content-center {
+  justify-content: center;
+}
+
+.verificar-stock-container .justify-content-between {
+  justify-content: space-between;
+}
+
+.verificar-stock-container .justify-content-end {
+  justify-content: flex-end;
+}
+
+.verificar-stock-container .flex-wrap {
+  flex-wrap: wrap;
+}
+
+.verificar-stock-container .gap-2 {
+  gap: 0.5rem;
+}
+
+.verificar-stock-container .gap-3 {
+  gap: 1rem;
+}
+
+.verificar-stock-container .w-full {
+  width: 100%;
+}
+
+.verificar-stock-container .mb-0 {
+  margin-bottom: 0;
+}
+
+.verificar-stock-container .mb-1 {
+  margin-bottom: 0.25rem;
+}
+
+.verificar-stock-container .mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.verificar-stock-container .mb-3 {
+  margin-bottom: 1rem;
+}
+
+.verificar-stock-container .mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+.verificar-stock-container .mt-3 {
+  margin-top: 1rem;
+}
+
+.verificar-stock-container .mt-4 {
+  margin-top: 1.5rem;
+}
+
+.verificar-stock-container .text-xl {
+  font-size: 1.25rem;
+}
+
+.verificar-stock-container .text-3xl {
+  font-size: 1.875rem;
+}
+
+.verificar-stock-container .font-bold {
+  font-weight: 700;
+}
+
+.verificar-stock-container .font-semibold {
+  font-weight: 600;
+}
+
+.verificar-stock-container .text-center {
+  text-align: center;
+}
+
+.verificar-stock-container .text-500 {
+  color: #6c757d;
+}
+
+.verificar-stock-container .text-primary {
+  color: #667eea;
+}
+
+.verificar-stock-container .text-green-500 {
+  color: #28a745;
+}
+
+.verificar-stock-container .text-red-500 {
+  color: #dc3545;
+}
+
+.verificar-stock-container .text-orange-500 {
+  color: #fd7e14;
+}
+
+.verificar-stock-container .border-round {
+  border-radius: 12px;
+}
+
+.verificar-stock-container .surface-0 {
+  background: #ffffff;
+}
+
+.verificar-stock-container .block {
+  display: block;
+}
+
+/* Grid system específico para stock */
+.verificar-stock-container .grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+
+.verificar-stock-container .col-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 0 0.5rem;
+}
+
+.verificar-stock-container .col-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 0 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .verificar-stock-container .md\:col-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  
+  .verificar-stock-container .md\:col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .verificar-stock-container .lg\:col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive específico para stock */
+@media screen and (max-width: 768px) {
+  .verificar-stock-container {
+    padding: 1rem;
+    padding-top: 4rem;
+  }
+  
+  .verificar-stock-container .p-card .p-card-body {
+    padding: 1rem;
+  }
+  
+  .verificar-stock-container .p-tabview .p-tabview-panels {
+    padding: 1rem;
+  }
+  
+  .verificar-stock-container .p-button {
+    padding: 0.65rem 1rem;
+    font-size: 0.8rem;
+  }
+  
+  .verificar-stock-container .stats-card {
+    padding: 1rem;
+  }
+  
+  .verificar-stock-container .stats-card .text-2xl {
+    font-size: 1.5rem;
+  }
+  
+  .verificar-stock-container .p-datatable .p-datatable-thead > tr > th,
+  .verificar-stock-container .p-datatable .p-datatable-tbody > tr > td {
+    padding: 0.5rem 0.25rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .verificar-stock-container {
+    padding: 0.75rem;
+    padding-top: 4rem;
+  }
+  
+  .verificar-stock-container .p-card .p-card-header {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  
+  .verificar-stock-container .p-card .p-card-body {
+    padding: 0.75rem;
+  }
+  
+  .verificar-stock-container .p-tabview .p-tabview-nav li .p-tabview-nav-link {
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+  }
+  
+  .verificar-stock-container .p-button {
+    padding: 0.6rem 0.75rem;
+    font-size: 0.75rem;
+  }
+  
+  .verificar-stock-container .stats-card {
+    padding: 0.75rem;
+  }
+  
+  .verificar-stock-container .stats-card .text-2xl {
+    font-size: 1.25rem;
+  }
+  
+  .verificar-stock-container .p-datatable .p-datatable-thead > tr > th,
+  .verificar-stock-container .p-datatable .p-datatable-tbody > tr > td {
+    padding: 0.4rem 0.2rem;
+    font-size: 0.7rem;
+  }
+  
+  .verificar-stock-container .field .p-inputtext,
+  .verificar-stock-container .field .p-inputnumber {
+    padding: 0.65rem;
+    font-size: 0.85rem;
+  }
+  
+  .verificar-stock-container .field label {
+    font-size: 0.85rem;
+  }
+}
+
+/* Animaciones específicas para stock */
+@keyframes stockFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes stockSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes stockPulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.verificar-stock-container .p-card {
+  animation: stockFadeIn 0.6s ease-out;
+}
+
+.verificar-stock-container .p-datatable {
+  animation: stockSlideIn 0.4s ease-out;
+}
+
+.verificar-stock-container .stats-card {
+  animation: stockFadeIn 0.6s ease-out;
+}
+
+.verificar-stock-container .p-tag {
+  animation: stockPulse 2s ease-in-out infinite;
+}
+
+/* Focus mejorado específico para stock */
+.verificar-stock-container *:focus-visible {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+.verificar-stock-container .p-button:focus-visible {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+.verificar-stock-container .p-inputtext:focus-visible,
+.verificar-stock-container .p-inputnumber:focus-visible {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* Estados de loading específicos para stock */
+.verificar-stock-container .p-button.p-button-loading {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.verificar-stock-container .p-button.p-button-loading .p-button-icon {
+  animation: stockSpin 1s linear infinite;
+}
+
+@keyframes stockSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
