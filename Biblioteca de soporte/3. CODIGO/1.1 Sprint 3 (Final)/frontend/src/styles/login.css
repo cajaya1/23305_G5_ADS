@@ -1,0 +1,428 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Reset específico para login */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.login-container {
+  min-height: 100vh;
+  height: 100vh; /* Altura exacta de la ventana */
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 1rem;
+  margin: 0;
+  overflow: hidden; /* Evita scrollbars innecesarios */
+  position: relative;
+}
+
+.login-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="%23ffffff" opacity="0.1"/><circle cx="20" cy="60" r="0.5" fill="%23ffffff" opacity="0.1"/><circle cx="80" cy="40" r="0.5" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  pointer-events: none;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 440px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 2.5rem 2rem;
+  border-radius: 24px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 0; /* Sin margen */
+}
+
+.login-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 24px 24px 0 0;
+}
+
+/* Logo Section */
+.logo-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logo-container {
+  position: relative;
+  margin-bottom: 1.25rem;
+  display: inline-block;
+}
+
+.logo-image {
+  width: 150px;
+  height: 70px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  transition: all 0.3s ease;
+  border: 3px solid #ffffff;
+  background: #ffffff;
+  padding: 6px;
+}
+
+.logo-image:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4);
+}
+
+.logo-fallback {
+  width: 70px;
+  height: 70px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  border: 3px solid #ffffff;
+}
+
+.logo-icon {
+  font-size: 2.2rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.login-card h1 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.login-card h2 {
+  color: #6c757d;
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Form Styles */
+.login-form {
+  margin: 1.5rem 0 0 0;
+}
+
+.input-group {
+  margin-bottom: 1.25rem;
+}
+
+.input-group:last-of-type {
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  display: block;
+  font-weight: 500;
+  color: #495057;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.custom-input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  background-color: #f8f9fa;
+  font-family: inherit;
+}
+
+.custom-input:focus {
+  border-color: #667eea;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  background-color: #ffffff;
+}
+
+.custom-input::placeholder {
+  color: #adb5bd;
+}
+
+.custom-input:disabled {
+  background-color: #e9ecef;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.password-group {
+  position: relative;
+}
+
+.password-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-input-wrapper input {
+  width: 100%;
+  padding-right: 3rem;
+}
+
+.toggle-password-btn {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #6c757d;
+  cursor: pointer;
+  z-index: 2;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+}
+
+.toggle-password-btn:hover {
+  color: #667eea;
+  background-color: rgba(102, 126, 234, 0.1);
+}
+
+.toggle-password-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.login-btn {
+  width: 100% !important;
+  background: linear-gradient(135deg, #667eea, #764ba2) !important;
+  border: none !important;
+  padding: 0.95rem !important;
+  font-size: 0.95rem !important;
+  font-weight: 600 !important;
+  color: white !important;
+  border-radius: 12px !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0 !important;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.login-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4) !important;
+}
+
+.login-btn:disabled {
+  opacity: 0.7 !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2) !important;
+}
+
+.login-msg {
+  margin: 1.25rem 0 0 0;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.login-msg.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.login-msg.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.login-footer {
+  margin: 1.5rem 0 0 0;
+  text-align: center;
+  padding-top: 1.25rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.login-footer p {
+  color: #6c757d;
+  font-size: 0.8rem;
+  margin: 0;
+  opacity: 0.8;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.logo-image, .logo-fallback {
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.login-card h1 {
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.login-card h2 {
+  animation: fadeInUp 0.8s ease-out 0.6s both;
+}
+
+.login-form {
+  animation: fadeInUp 0.8s ease-out 0.8s both;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .login-container {
+    padding: 0.75rem;
+  }
+
+  .login-card {
+    padding: 2rem 1.75rem;
+    max-width: 400px;
+  }
+
+  .login-card h1 {
+    font-size: 1.6rem;
+  }
+
+  .login-card h2 {
+    font-size: 0.9rem;
+  }
+
+  .logo-image, .logo-fallback {
+    width: 60px;
+    height: 60px;
+  }
+
+  .logo-icon {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .login-container {
+    padding: 0.5rem;
+    min-height: 100vh;
+    height: auto; /* Permite crecer si es necesario */
+  }
+
+  .login-card {
+    padding: 1.75rem 1.5rem;
+    margin: 0;
+    border-radius: 20px;
+    max-width: none;
+    width: calc(100vw - 1rem);
+  }
+
+  .login-card h1 {
+    font-size: 1.5rem;
+  }
+
+  .login-card h2 {
+    font-size: 0.85rem;
+  }
+
+  .custom-input {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .login-btn {
+    padding: 0.85rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  .logo-image, .logo-fallback {
+    width: 55px;
+    height: 55px;
+  }
+
+  .logo-icon {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .login-card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .logo-section {
+    margin-bottom: 1.5rem;
+  }
+
+  .login-form {
+    margin: 1.25rem 0 0 0;
+  }
+}
+
+/* Estados de focus mejorados */
+.login-btn:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+.custom-input:focus {
+  transform: translateY(-1px);
+}
+
+/* Mejoras de accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Prevenir espacios extra */
+.login-container > * {
+  margin: 0;
+}
+
+.login-card > *:first-child {
+  margin-top: 0;
+}
+
+.login-card > *:last-child {
+  margin-bottom: 0;
+}
