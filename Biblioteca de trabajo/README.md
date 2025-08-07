@@ -1,6 +1,6 @@
 # 📂 Biblioteca de Trabajo
 
-Esta carpeta contiene los documentos y archivos **en desarrollo activo** del sistema **Ferretería DSA**. Aquí se gestionan los elementos antes de pasar a la Biblioteca de Soporte.
+Esta carpeta contiene los documentos y archivos **en desarrollo** del sistema **Ferretería DSA**. Aquí se gestionan los elementos antes de pasar a la Biblioteca de Soporte.
 
 ## 👥 Responsables
 
